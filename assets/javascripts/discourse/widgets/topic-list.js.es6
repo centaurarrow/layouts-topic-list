@@ -36,9 +36,9 @@ export default createWidget('layouts-topic-list', {
   },
 
   topicList(topics, loginRequired) {
-    if (loginRequired && !this.currentUser) {
-      return this.attach('login-required');
-    }
+  //  if (loginRequired && !this.currentUser) {
+  //    return this.attach('login-required');
+  //  }
 
     if (!this.state.gotTopics) {
       return [ h('div.spinner.small') ];
@@ -93,7 +93,8 @@ export default createWidget('layouts-topic-list', {
     const { currentUser } = this;
 
     if (state) {
-      if (currentUser && !state.gotTopics) {
+    //  if (currentUser && !state.gotTopics) {
+      if(!state.gotTopics)
         this.getTopics();
       }
 
