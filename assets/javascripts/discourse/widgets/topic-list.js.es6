@@ -94,7 +94,7 @@ export default createWidget('layouts-topic-list', {
 
     if (state) {
     //  if (currentUser && !state.gotTopics) {
-      if(!state.gotTopics)
+      if(!state.gotTopics) {
         this.getTopics();
       }
 
